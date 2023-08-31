@@ -68,9 +68,15 @@ public class UIMainScene : MonoBehaviour
         }
         else
         {
+            Instance = this;
             InfoPopup.gameObject.SetActive(true);
             m_CurrentContent = content;
             InfoPopup.Name.text = content.GetName();
         }
+    }
+    
+    public void BackToMenu()
+    {
+       SceneManager.LoadScene(0);
     }
 }
